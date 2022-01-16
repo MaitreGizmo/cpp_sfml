@@ -9,6 +9,6 @@ set(SFML_DIR "cmake-build-debug/SFML_source_2_5_1")
 
 find_package(SFML 2.5.1 COMPONENTS graphics window system REQUIRED)
 
-add_executable(cpp_sfml main.cpp mainWindow.cpp mainWindow.h)
+add_executable(cpp_sfml main.cpp MainWindow.cpp MainWindow.h Settings.h WorldBloc.cpp WorldBloc.h)
 
 target_link_libraries(cpp_sfml sfml-graphics sfml-window sfml-system)
