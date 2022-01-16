@@ -9,7 +9,6 @@ using namespace std;
 using namespace cpp_sfml;
 
 int main() {
-
    MainWindow mainWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
 
    mainWindow.render();

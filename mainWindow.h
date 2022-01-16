@@ -11,6 +11,7 @@
 #include <SFML/Graphics.hpp>
 
 #include "WorldBloc.h"
+#include "Player.h"
 
 namespace cpp_sfml {
 
@@ -21,13 +22,13 @@ namespace cpp_sfml {
       void render();
 
    private:
-      unsigned    _width;
-      unsigned    _height;
-      std::string _title;
-
+      unsigned         _width;
+      unsigned         _height;
+      std::string      _title;
       sf::RenderWindow _window;
 
       std::vector<WorldBloc> _world;
+      Player                 _player;
 
       void dispatchEvents();
 
@@ -36,6 +37,18 @@ namespace cpp_sfml {
       void close();
 
       void loadMap();
+
+      void detectCollisions();
+
+      void applyGravity();
+
+      void detectCollisionLeftRight(WorldBloc &bloc);
+
+      void detectCollisionTopBottom(WorldBloc &bloc);
+
+      void keyPressed(sf::Event e);
+
+      void keyReleased(sf::Event e);
    };
 
 }

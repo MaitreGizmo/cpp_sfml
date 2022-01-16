@@ -39,6 +39,10 @@ VertexArray WorldBloc::getVertex() {
    return _vertex;
 }
 
+VertexArray &WorldBloc::getVertexRef() {
+   return _vertex;
+}
+
 WorldBlocType WorldBloc::getType(Color color) {
    if (color.r == 0 && color.g == 255 && color.b == 0)
       return WorldBlocType::FLOOR;
@@ -56,3 +60,5 @@ Color WorldBloc::getRenderColor() {
          break;
    }
 }
+
+

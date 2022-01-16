@@ -18,12 +18,14 @@ namespace cpp_sfml {
 
       sf::VertexArray getVertex();
 
+      sf::VertexArray &getVertexRef();
+
+      static cpp_sfml::WorldBlocType getType(sf::Color color);
+
    private:
       sf::Vector2f            _position;
       sf::VertexArray         _vertex;
       cpp_sfml::WorldBlocType _type;
-
-      cpp_sfml::WorldBlocType getType(sf::Color color);
 
       sf::Color getRenderColor();
 
